@@ -1,0 +1,257 @@
+/*--basic setting start--*/
+
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+
+.wrap{
+	margin: 0 auto;
+    max-width: 1500px;
+    font-size: $fontsize-m;
+    line-height: $line-h-master;
+    font-family: 'Noto Sans TC', sans-serif;
+    background-color: $color-thir;
+    color: $color-master;
+    @include over-hidden;
+    letter-spacing: $letter-spc-master;
+}
+.clear{
+    @include clear;
+}
+h4{
+    font-size: $fontsize-xl;
+    line-height: $line-h-sec;
+    margin-bottom: 40px;
+}
+h5{
+    font-size: $fontsize-m;
+}
+.container{
+    margin: 0 2%;
+}
+
+/*--basic setting end--*/
+
+
+
+/*--header start--*/
+.header .container {
+    min-height: 550px;
+    position: relative;
+    padding-top: 16px;
+    h1{
+        float: left;
+        padding: 5px;
+        margin-top: 13px;
+        a{
+           background: url(../img/logo_w.png);
+           background: url(../img/logo_w.svg);
+           width: 120px;
+           height: 24px;
+           display: block;
+           @include norepeat;
+           @include hide-text; 
+        }
+    }
+    .hamburger_menu{
+        @include none;
+        }
+    .hamburger_menu,.cancel{
+        @include pad500(){
+            color: $color-sec;
+            font-size: $fontsize-xxl;
+            margin-top: 15px;
+            margin-right: 12px;
+            padding: 3px;
+            float: right;
+            display: inherit;
+            @include pointer;
+        }
+    }
+    .none{
+        @include none;
+    }
+}
+
+.menu{
+    float: right;
+    color: $color-sec;
+    margin-top: 18px;
+    li{
+        display: inline-block;
+        margin-left: 18px;
+        a{
+            text-decoration: none;
+            color: $color-sec;
+            padding: 8px 8px;
+        }
+        a:hover,a:active{
+            background: $color-four;
+            background: $color-five;
+            border-radius: 10px;
+        }
+    }
+    @include pad500(){
+        max-height: 0px;
+        position: absolute;
+        z-index: 100;
+        top: 45px;
+        left: 0;
+        right: 0;
+        background: $color-thir;
+        transition: max-height 1s;
+        @include over-hidden;
+        li{
+            display: block;
+            margin: 10px;
+            text-align: center;
+            font-size: $fontsize-xl;
+            a{
+                color: $color-master;
+                display: block;
+            }
+        }
+    }
+}
+.header .showmenu .menu{
+    @include pad500(){
+        max-height: 500px;
+    }
+}
+
+.banner{
+    background: url(../img/header_desktop.png);
+    @include norepeat;
+    background-position: center top; 
+    background-size: cover;
+    @include pad500(){
+        background: url(../img/header_mobile_2.png);
+        background-position: center; 
+        @include norepeat;
+        background-size: cover;
+    }
+}
+.slogan{
+    width: 460px;
+    margin: 0 auto;
+    margin-top: 160px;
+    text-align: center;
+    padding: 20px; 
+    background: $color-six;
+    h2{
+        color: $color-sec;
+        font-size: $fontsize-xxxl;
+        }
+    h3{
+        color: $color-sec;
+        font-size: $fontsize-m;
+        margin: 16px 0px;
+        letter-spacing: $letter-spc-l; 
+    }
+    .fa-utensils{
+        padding: 0 5px;
+    }
+    .slogan_phonesize{
+        @include none;
+    }
+
+    @include pad500(){
+        width: 80%;
+        margin-top: 140px;
+        .slogan_pcsize{
+            @include none;
+        }
+        .slogan_phonesize{
+            display: inherit;
+        }
+    }
+    @include ip5(){
+        width: 95%;
+        padding: 20px 6px;
+    }
+}
+
+/*--header end--*/
+
+/*--footer start--*/
+
+.footer{
+    padding: 40px 0; 
+    .about,
+    .contact{
+        float: left;
+        width: 299px;
+        margin-right: 30px;
+    }  
+    h4{
+        margin-bottom:14px; 
+    }
+    h5{
+        line-height: $line-h-sec;
+    }
+    .contact ul li{
+        list-style: disc inside;
+        color: $color-master;
+        line-height: $line-h-sec;
+    }
+    @include pc940(){
+        font-size: $fontsize-s;
+        h5{
+            font-size: $fontsize-s;
+        }
+    }
+    .about,
+    .contact{
+        @include pc940(){
+            width: 30.33333%;
+            margin:0 1.5%;
+        }
+        @include pad600(){
+            width: 45%;
+            margin:0 2.5%;
+        }
+    }  
+}
+
+.social_link{
+    float: right;
+    ul{
+        float: right;
+        margin-top: 10px;
+        li{
+            display: inline-block;
+            padding: 4px 0;
+            margin:0 5px;
+            img{
+                width: 31px;
+                height: 31px;
+            }
+        }
+    }
+    @include pc940(){
+        width: 30.33333%;
+    }
+    @include pad600(){
+        @include clear;
+        float: none;
+        width: 250px;
+        margin: 0 auto;
+        padding-top: 20px;
+        .logo{
+            display: inline-block;
+            img{
+                height: 25px;
+            }
+        }
+        ul{
+            float: none;
+            display: inline-block;
+            li{
+                margin: 0 2.5px;
+                img{
+                    width: 25px;
+                    height: 25px;
+                }
+            }
+        }
+    }
+}
+/*--footer end--*/

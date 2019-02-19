@@ -1,0 +1,331 @@
+/*--cart start--*/
+
+.content .container .cart_side_menu h4{
+    text-align: left;
+    margin-bottom: 16px;
+    padding-left: 15px;
+}
+.cart_side_menu{
+    float: left;
+    width: 215px;
+    h4 .fa-leaf{
+        margin-right: 10px;
+    }
+    ul{
+        padding: 5px;
+        letter-spacing: $letter-spc-m;
+        li{
+            border-bottom: 1px solid $color-master;
+        }
+        li:nth-last-child(1){
+            border-bottom:none;   
+        }
+        a{
+            text-decoration: none;
+            color: $color-master;
+            display: block;
+            padding: 5px 10px;
+        }
+        a:hover{
+            color: $color-sec;
+            background: $color-master;
+        }
+    }
+    .category{
+        color: $color-sec;
+        background: $color-master;
+    }
+}
+
+
+.nav{
+    height: 30px;
+}
+.cart_main{
+    margin-left: 240px;
+    margin-top: 50px;
+}
+.cart_search{
+    width: 460px;
+    position: relative;
+    float: left;
+    .cart_search_input{
+        vertical-align: middle;
+        width: 436px;
+        height: 22px;
+        border: 2px solid $color-master;
+        background: none;
+        padding: 2px 10px;
+    }
+    .fa-search{
+        vertical-align: middle;
+        background: $color-master;
+        color: $color-sec;
+        border: 7px solid $color-master;
+        position: absolute;
+        right: 0;
+        top:0;
+    }
+}
+
+
+.cart_checkout{
+    float: right;
+    h5{
+        display: inline;
+        vertical-align: middle;
+    }
+    a{
+        color: $color-master;
+        text-decoration: none;
+        padding: 2px 5px;
+    }
+    a:hover{
+        color: $color-four;
+    }
+}
+
+.decoration_line_left{
+    margin: 0 6px;
+    height: 14px;
+    border-right: 1.4px solid $color-master;
+    vertical-align: middle;
+}
+
+.cart_logo{
+    .fa-shopping-cart{
+        position: relative;
+        font-size: $fontsize-xxl;
+        vertical-align: middle;
+        padding: 2px 5px;
+        margin-bottom: 4px;
+    }
+    .cart_quantity{
+        position: absolute;
+        top: -5px;
+        right: -5px;
+        font-size: $fontsize-xs;
+        color: $color-sec;
+        background: $color-four;
+        border: 1px solid $color-thir;
+        border-radius: 15px;
+        height: 13px;
+        width: 13px;
+        text-align: center;
+    }
+}
+.cart_logo:hover > .fa-shopping-cart{
+    color: $color-four;
+}
+
+
+.commodity{
+    display: block;
+    margin-top: 50px;
+    .container{
+        margin: 0px 15px 15px 15px;
+        text-align: center;
+    }
+    .product{
+        float: left;
+        box-shadow: 3px 3px 4px 0px $color-sev;
+        width: 30.3333%;
+        max-width: 301px;
+        min-height: 280px;
+        margin-bottom: 50px;
+        margin-left:1.5%;
+        margin-right:1.5%;
+        @include norepeat;
+        background-position: top center;
+        position: relative;
+    }
+}
+
+.product_pic_box{
+    width: 100%;
+    height: 120px;
+    max-width: 301px;
+    @include over-hidden;
+    position: relative;
+}
+.product_pic{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 120px;
+    max-width: none;
+}
+
+.fa-heart{
+    color: $color-sec;
+    font-size: $fontsize-xxl;
+    padding: 9px;
+    @include pointer;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.hot_commodity{
+    position: absolute;
+    right: 5px;
+    top: 12px;
+    p{
+        position: absolute;
+        right:-6px;
+        top: 4px;
+        vertical-align: middle;
+        z-index: 100;
+        transform: rotate(-319deg);
+        color: $color-sec;
+        font-weight: bold;
+        letter-spacing: $letter-spc-s;
+    }
+}
+.hot_commodity_position{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 0;
+}
+.trapezoid{
+    width: 80px;
+    border-bottom: 30px solid $color-eig;
+    border-left: 35px solid transparent;
+    border-right: 27px solid transparent;
+    transform: rotate(-319deg);
+    position: absolute;
+    z-index: 3;
+    vertical-align: middle;
+}
+.traingle{
+    border-right: solid 12px $color-nine;
+    border-left: solid 12px transparent;
+    border-top: solid 12px transparent;
+}
+.traingle_1{
+    position: absolute;
+    z-index: 1;
+    top: -14px;
+    left: 0px;
+    transform: rotate(-135deg);
+}
+.traingle_2{
+    position: absolute;
+    z-index: 1;
+    top: 70.5px;
+    right: -13px;
+    transform: rotate(315deg);
+}
+.decoration_line_top{
+    border-top: 1.8px solid $color-master;
+    width: 90px;
+    margin: 0 auto;
+}
+.commodity {
+    .none{
+        @include none;        
+    }
+    .product_name{
+        margin: 0;
+        padding-top: 11px;
+    }
+    .product_name_eng{
+        font-size: $fontsize-xs;
+        margin-bottom: 10px;
+    }
+    .price{
+        font-size: $fontsize-xl;
+        margin: 25px 0 16px 0;
+    }
+    .add_to_the_cart{
+        color: $color-four;
+        border: 2px solid $color-four;
+        border-radius: 5px;
+        vertical-align: middle;
+        @include pointer;
+        padding: 0 10px;
+    }
+    .add_to_the_cart:hover{
+        color: $color-sec;
+        background: $color-four;
+    }
+}
+
+.commodity{
+    .product{
+        @include pc900(){
+            width: 45%;
+            margin: 0 2.5%;
+            margin-bottom: 30px;
+        }
+    }
+    @include ipad768(){
+        margin-top: 8%;
+    }
+}
+.cart_search{
+    @include ipad768(){
+        width: 290px;
+        .cart_search_input{
+            width: 266px;
+        }
+    }
+}
+
+
+.cart_main{
+    @include ipad767(){
+        @include clear;
+        width: 90%;
+        margin: 0 5%;
+    }
+}
+.cart_side_menu{
+    @include ipad767(){
+        width: 90%;
+        margin: 0 5% 5% 5%;
+        margin-top: 50px;
+    }
+}
+.cart_search{
+    @include ipad767(){
+        width: 70%;
+        margin-left: 5px;
+        .cart_search_input{
+            width: 60%;
+        }
+        .fa-search{
+            right: 30%;
+        }
+    }
+}
+
+
+.commodity .product{
+    @include pad500(){
+        width: 80%;
+        max-width: 301px;
+        margin: 0 10%;
+        margin-bottom: 30px;
+    }
+}
+.cart_search{
+    @include pad500(){
+        width: 100%;
+        .cart_search_input{
+            width: 85%;
+        }
+        .fa-search{
+            right: 3%;
+        }
+    }
+}
+.cart_checkout{
+    @include pad500(){
+        margin: 15px 3px; 
+    }
+}
+
+/*--cart end--*/

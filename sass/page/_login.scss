@@ -1,0 +1,133 @@
+/*--login & register start--*/
+
+.login_logo{
+    background: url(../img/logo_l.svg);
+    background-position: top center;
+    @include norepeat;
+    min-width: 243px;
+    height: 48px;
+    margin-top: 50px;
+    margin-bottom: 5px; 
+}
+.login_title,
+.register_title{
+    font-size: $fontsize-l;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 25px;
+}
+
+.login_frame{
+    width: 280px;
+    margin: 0 auto;
+    margin-top: 35px;
+    margin-bottom: 50px;
+    padding: 10px;
+    border-top: 4px solid $color-four;
+    box-shadow: 3px 3px 4px 0px $color-sev;
+    ul li{
+        margin-bottom: 10px;
+    }
+}
+.forget_password,
+.have_account{
+    a{
+        font-size: $fontsize-s;
+        color: $color-four;
+        text-decoration: none;
+    }
+    a:hover{
+        text-decoration: underline;
+    }
+}
+
+.login_email_input,
+.login_paeeword_input{
+    width: 270px;
+    height: 32px;
+    position: relative;
+    margin-bottom: 5px;
+    input{
+        width: 240px;
+        height: 24px;
+        padding: 2px 5px;
+        padding-left: 25px;
+        background: $color-sec;
+        border: 1px solid $color-sev;
+        box-shadow: inset 0px 1px 0px 0px $color-thir;
+        border-radius: 3px;
+    }
+}
+.login_email_input .fa-envelope,
+.login_paeeword_input .fa-lock{
+    position: absolute;
+    left:7px;
+    top:7px;
+    color: $color-ten;
+}
+
+.login_submit{
+    margin-top: 25px;
+    input{
+        width: 120px;
+        margin: 8px;
+        font-size: $fontsize-s;
+        padding: 7px;
+        color:$color-sec;
+        border-radius: 5px;
+        @include pointer;
+    }
+    .register_input{
+        background: $color-ten;
+        background: $color-six;
+    }
+    .register_input:hover{
+        background: $color-sec;
+        color: $color-sev;
+        border: 1px solid $color-sev;
+    }
+    .login_input{
+        background: $color-four;
+    }
+    .login_input:hover{
+        background: $color-sec;
+        color:  $color-four;
+    }
+}
+
+.register_frame{
+    width: 600px;
+}
+.register_terms{
+    float: left;
+    width: 48%;
+    margin-right: 4%;
+}
+.register_login_frame{
+    float: left;
+    width: 48%;
+    .register_input{
+        float: right;
+        background: $color-four;
+        color: $color-sec;
+        margin-right: 15px;
+    }    
+}
+
+
+@include pad600(){
+    .register_frame{
+        width: 90%;
+        max-width: 450px;
+    }
+    .register_terms,
+    .register_login_frame{
+        width: 96%;
+        margin: 0 auto;
+    }
+    .register_terms{
+        margin-bottom: 30px;
+    }
+}
+/*--login & register end--*/
