@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <title>六角西餐廳2</title>
 
-    <link rel="shortcut icon" href="../img/knife_icon_1515.png">
+    <link rel="shortcut icon" href="img/knife_icon_1515.png">    
 
     <meta name="description" content="123">
     <meta name="keyword" content="漢堡,餐廳,高雄">
@@ -17,13 +17,13 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="FB website">
     <meta property="og:image" content="FB img">
-
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <link rel=stylesheet type="text/css" href="../css/all.css">
+    
+    <link rel=stylesheet type="text/css" href="css/all.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
 
-    <script src="../js/jquery-3.1.1.min.js"></script>
-    <script src="../js/all.js"></script>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/all.js"></script>
 </head>
 <body>
     <div class="wrap">
@@ -53,10 +53,14 @@
                 <div class="login_logo"></div>
                 <h4>享受美食好味道</h4>
                 
-                <div class="login_frame">
-                    <h5 class="login_title">LOGIN</h5>
-                    <ul>
+                <div class="login_frame register_frame">
+                    <h5 class="register_title">REGISTER</h5>
+                    <div class="register_terms">
+                        <h5>就是這樣條款：</h5>
+                        <p>Mauris non tempor quam, et lacinia sapien. Mauris accumsan eros eget libero posuere vulputate. Etiam elit elit, elementum sed varius at, adipiscing vitae est. Sed nec felis pellentesque, lacinia dui sed, ultricies sapien...</p>
+                    </div>
 
+                    <ul class="register_login_frame">
                         <li>
                             <label for="email">Email Adress*</label>
                             <div class="login_email_input">
@@ -71,15 +75,19 @@
                                 <input type="password" name="password" id="password">
                                 <i class="fas fa-lock"></i>
                             </div>
-                            <div class="forget_password"><a href="#">忘記密碼？</a></div>
+                            <div class="login_paeeword_input">
+                                <input type="password" name="password" id="password">
+                                <i class="fas fa-lock"></i>
+                            </div>
+                            <div class="have_account"><a href="login.html">已經有帳號了？</a></div>
                         </li>
 
                         <li class="login_submit">
-                            <a href="register.html"><input type="submit" name="register" class="register_input" value="註冊"></a>
-                            <input type="submit" name="login" class="login_input" value="登入">
+                            <input type="submit" name="register" class="register_input" value="註冊">
                         </li>
 
                     </ul>
+                    <div class="clear"></div>
                 </div>
             </div>
         </div>
@@ -99,15 +107,16 @@
                     </ul>
                 </div>
                 <div class="social_link">
-                    <div class="logo"><a href="index.html"><img src="../img/logo_l.svg" alt="index.html"></a></div>
+                    <div class="logo"><a href="index.html"><img src="img/logo_l.svg" alt="index.html"></a></div>
                     <ul>
-                        <li><a href="#"><img src="../img/google+_logo.png" alt="#"></a></li>
-                        <li><a href="#"><img src="../img/twitter-logo.png" alt="#"></a></li>
-                        <li><a href="#"><img src="../img/FB-Icon.png" alt="#"></a></li>
+                        <li><a href="#"><img src="img/google+_logo.png" alt="#"></a></li>
+                        <li><a href="#"><img src="img/twitter-logo.png" alt="#"></a></li>
+                        <li><a href="#"><img src="img/FB-Icon.png" alt="#"></a></li>
                     </ul>
                 </div>
             </div>
             <div class="clear"></div>
+        </div>
         </div>
     </div>
 </body>
